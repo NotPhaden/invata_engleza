@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Învățare Engleză Mobil</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #a8edea, #fed6e3);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    padding: 25px 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+header h1 { margin: 0; font-size: 2em; color: #2c3e50; }
+header p { font-size: 1em; color: #34495e; }
+.container { max-width: 600px; margin: 0 auto; padding: 10px; }
+.category { margin-bottom: 25px; }
+.category h2 {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.word {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 8px 0;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s, background 0.3s;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+.word:hover {
+    background-color: #ccefff;
+    transform: scale(1.02);
+}
+.translation { font-weight: bold; color: #d35400; }
+@media (max-width: 480px) {
+    .word { flex-direction: column; align-items: flex-start; font-size: 16px; }
+    .category h2 { font-size: 1.1em; }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Învățare Engleză Rapidă</h1>
+<p>Apasă pe un cuvânt pentru a auzi pronunția în engleză și traducerea în română</p>
+</header>
+
+<div class="container">
+
+<!-- 1. Cuvinte uzuale -->
+<div class="category">
+<h2>Cuvinte uzuale</h2>
+<div class="word" onclick="speakWord('Hello','Bună')">Hello <span class="translation">- Bună</span></div>
+<div class="word" onclick="speakWord('Goodbye','La revedere')">Goodbye <span class="translation">- La revedere</span></div>
+<div class="word" onclick="speakWord('Please','Te rog')">Please <span class="translation">- Te rog</span></div>
+<div class="word" onclick="speakWord('Thank you','Mulțumesc')">Thank you <span class="translation">- Mulțumesc</span></div>
+<div class="word" onclick="speakWord('Yes','Da')">Yes <span class="translation">- Da</span></div>
+<div class="word" onclick="speakWord('No','Nu')">No <span class="translation">- Nu</span></div>
+<div class="word" onclick="speakWord('Excuse me','Scuză-mă')">Excuse me <span class="translation">- Scuză-mă</span></div>
+<div class="word" onclick="speakWord('Sorry','Îmi pare rău')">Sorry <span class="translation">- Îmi pare rău</span></div>
+<div class="word" onclick="speakWord('Help','Ajutor')">Help <span class="translation">- Ajutor</span></div>
+</div>
+
+<!-- 2. Zilele săptămânii -->
+<div class="category">
+<h2>Zilele săptămânii</h2>
+<div class="word" onclick="speakWord('Monday','Luni')">Monday <span class="translation">- Luni</span></div>
+<div class="word" onclick="speakWord('Tuesday','Marți')">Tuesday <span class="translation">- Marți</span></div>
+<div class="word" onclick="speakWord('Wednesday','Miercuri')">Wednesday <span class="translation">- Miercuri</span></div>
+<div class="word" onclick="speakWord('Thursday','Joi')">Thursday <span class="translation">- Joi</span></div>
+<div class="word" onclick="speakWord('Friday','Vineri')">Friday <span class="translation">- Vineri</span></div>
+<div class="word" onclick="speakWord('Saturday','Sâmbătă')">Saturday <span class="translation">- Sâmbătă</span></div>
+<div class="word" onclick="speakWord('Sunday','Duminică')">Sunday <span class="translation">- Duminică</span></div>
+</div>
+
+<!-- 3. Culori -->
+<div class="category">
+<h2>Culori</h2>
+<div class="word" onclick="speakWord('Red','Roșu')">Red <span class="translation">- Roșu</span></div>
+<div class="word" onclick="speakWord('Blue','Albastru')">Blue <span class="translation">- Albastru</span></div>
+<div class="word" onclick="speakWord('Green','Verde')">Green <span class="translation">- Verde</span></div>
+<div class="word" onclick="speakWord('Yellow','Galben')">Yellow <span class="translation">- Galben</span></div>
+<div class="word" onclick="speakWord('Black','Negru')">Black <span class="translation">- Negru</span></div>
+<div class="word" onclick="speakWord('White','Alb')">White <span class="translation">- Alb</span></div>
+</div>
+
+<!-- 4. Mâncare -->
+<div class="category">
+<h2>Mâncare</h2>
+<div class="word" onclick="speakWord('Bread','Pâine')">Bread <span class="translation">- Pâine</span></div>
+<div class="word" onclick="speakWord('Milk','Lapte')">Milk <span class="translation">- Lapte</span></div>
+<div class="word" onclick="speakWord('Cheese','Brânză')">Cheese <span class="translation">- Brânză</span></div>
+<div class="word" onclick="speakWord('Apple','Măr')">Apple <span class="translation">- Măr</span></div>
+<div class="word" onclick="speakWord('Banana','Banana')">Banana <span class="translation">- Banana</span></div>
+<div class="word" onclick="speakWord('Egg','Ou')">Egg <span class="translation">- Ou</span></div>
+<div class="word" onclick="speakWord('Chicken','Pui')">Chicken <span class="translation">- Pui</span></div>
+<div class="word" onclick="speakWord('Fish','Pește')">Fish <span class="translation">- Pește</span></div>
+<div class="word" onclick="speakWord('Rice','Orez')">Rice <span class="translation">- Orez</span></div>
+<div class="word" onclick="speakWord('Water','Apă')">Water <span class="translation">- Apă</span></div>
+</div>
+
+<!-- 5. Animale -->
+<div class="category">
+<h2>Animale</h2>
+<div class="word" onclick="speakWord('Dog','Câine')">Dog <span class="translation">- Câine</span></div>
+<div class="word" onclick="speakWord('Cat','Pisică')">Cat <span class="translation">- Pisică</span></div>
+<div class="word" onclick="speakWord('Bird','Pasăre')">Bird <span class="translation">- Pasăre</span></div>
+<div class="word" onclick="speakWord('Cow','Vacă')">Cow <span class="translation">- Vacă</span></div>
+<div class="word" onclick="speakWord('Horse','Cal')">Horse <span class="translation">- Cal</span></div>
+<div class="word" onclick="speakWord('Sheep','Oaie')">Sheep <span class="translation">- Oaie</span></div>
+</div>
+
+<!-- 6. Familie -->
+<div class="category">
+<h2>Familie</h2>
+<div class="word" onclick="speakWord('Mother','Mamă')">Mother <span class="translation">- Mamă</span></div>
+<div class="word" onclick="speakWord('Father','Tată')">Father <span class="translation">- Tată</span></div>
+<div class="word" onclick="speakWord('Brother','Frate')">Brother <span class="translation">- Frate</span></div>
+<div class="word" onclick="speakWord('Sister','Soră')">Sister <span class="translation">- Soră</span></div>
+<div class="word" onclick="speakWord('Grandmother','Bunică')">Grandmother <span class="translation">- Bunică</span></div>
+<div class="word" onclick="speakWord('Grandfather','Bunic')">Grandfather <span class="translation">- Bunic</span></div>
+</div>
+
+<!-- 7. Părți ale corpului -->
+<div class="category">
+<h2>Părți ale corpului</h2>
+<div class="word" onclick="speakWord('Head','Cap')">Head <span class="translation">- Cap</span></div>
+<div class="word" onclick="speakWord('Hand','Mână')">Hand <span class="translation">- Mână</span></div>
+<div class="word" onclick="speakWord('Leg','Picior')">Leg <span class="translation">- Picior</span></div>
+<div class="word" onclick="speakWord('Eye','Ochi')">Eye <span class="translation">- Ochi</span></div>
+<div class="word" onclick="speakWord('Ear','Ureche')">Ear <span class="translation">- Ureche</span></div>
+<div class="word" onclick="speakWord('Mouth','Gură')">Mouth <span class="translation">- Gură</span></div>
+</div>
+
+<!-- 8. Verbe uzuale -->
+<div class="category">
+<h2>Cuvinte folosite de in fiecare zi</h2>
+<div class="word" onclick="speakWord('Go','A merge')">Go <span class="translation">- A merge</span></div>
+<div class="word" onclick="speakWord('Come','A veni')">Come <span class="translation">- A veni</span></div>
+<div class="word" onclick="speakWord('Eat','A mânca')">Eat <span class="translation">- A mânca</span></div>
+<div class="word" onclick="speakWord('Drink','A bea')">Drink <span class="translation">- A bea</span></div>
+<div class="word" onclick="speakWord('See','A vedea')">See <span class="translation">- A vedea</span></div>
+<div class="word" onclick="speakWord('Sleep','A dormi')">Sleep <span class="translation">- A dormi</span></div>
+</div>
+
+<!-- 9. Numere 1-100 -->
+<div class="category">
+<h2>Numere 1-100</h2>
+<div id="numbers"></div>
+</div>
+
+</div>
+
+<script>
+function speakWord(english, romanian){
+    const utterEng = new SpeechSynthesisUtterance(english);
+    utterEng.lang = 'en-US';
+    const utterRo = new SpeechSynthesisUtterance(romanian);
+    utterRo.lang = 'ro-RO';
+    utterEng.onend = ()=>{ speechSynthesis.speak(utterRo); };
+    speechSynthesis.speak(utterEng);
+}
+
+// Generare numere 1-100
+const numberDiv = document.getElementById('numbers');
+const numberWords = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
+"Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty"];
+for(let i=1;i<=100;i++){
+    let word;
+    if(i<=20){ word = numberWords[i-1]; }
+    else if(i<100){
+        const tens = ["","", "Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+        const ten = Math.floor(i/10);
+        const one = i%10;
+        word = tens[ten];
+        if(one>0){ word += "-" + numberWords[one-1]; }
+    } else { word = "One Hundred"; }
+    const div = document.createElement('div');
+    div.className = 'word';
+    div.innerHTML = `${i} - ${word}`;
+    div.onclick = ()=> speakWord(word, i.toString());
+    numberDiv.appendChild(div);
+}
+</script>
+
+</body>
+</html>
